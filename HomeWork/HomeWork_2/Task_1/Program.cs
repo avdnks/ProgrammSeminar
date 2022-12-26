@@ -4,10 +4,16 @@
 Console.WriteLine ("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int firstDigit = number / 10; 
-int secondDigit = firstDigit % 10;
-
-Console.WriteLine($"{secondDigit}");
+if (number > 99 && number < 1000)
+{
+    int firstDigit = number / 10; 
+    int secondDigit = firstDigit % 10;
+    Console.WriteLine($"Вторая цифра числа {number}: {secondDigit}");
+}
+else
+{
+    Console.WriteLine("Введенное число не является трехзначным");
+}
 
 
 
